@@ -14,7 +14,7 @@ namespace RelevantLobster.Data.Variables
     {
         [Tooltip("The value to be used as the Variable's initial runtime value.")]
         [SerializeField]
-        protected T m_initialValue => default;
+        protected T m_initialValue = default;
 
 #if UNITY_EDITOR
 

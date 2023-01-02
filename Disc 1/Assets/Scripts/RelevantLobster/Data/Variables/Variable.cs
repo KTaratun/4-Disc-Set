@@ -27,6 +27,7 @@ namespace RelevantLobster.Data.Variables
         internal const string PreviousValuePropertyName = nameof(m_previousValue);
 
 #endif
+
         private bool _shouldTreatAsValueType = false;
 
         public event Action OnChanged;
@@ -74,7 +75,7 @@ namespace RelevantLobster.Data.Variables
 
         #region Unity Events
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _shouldTreatAsValueType = ObjectUtility.IsTreatedAsValueType<T>();
         }
